@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/armon/go-radix"
-	v1 "github.com/zilicorp/bull/api/core/v1"
+	v1 "github.com/zilicorp/bull/pkg/api/core/v1"
 	"github.com/zilicorp/bull/store"
 )
 

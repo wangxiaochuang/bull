@@ -3,7 +3,7 @@ package store
 import (
 	"context"
 
-	v1 "github.com/zilicorp/bull/api/core/v1"
+	v1 "github.com/zilicorp/bull/pkg/api/core/v1"
 )
 
 type Store interface {
@@ -14,4 +14,9 @@ type Store interface {
 	Delete(ctx context.Context, key string) error
 
 	List(ctx context.Context, prefix string) ([]string, error)
+}
+
+type ToggleablePurgemonster interface {
+	Purge(ctx context.Context)
+	SetEnabled(bool)
 }
